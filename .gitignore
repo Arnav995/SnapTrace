@@ -1,0 +1,27 @@
+# Ignore node_modules everywhere (backend, frontend, root)
+**/node_modules/
+node_modules/
+
+# Ignore Python virtual environments (python-worker, root)
+**/venv/
+**/.venv/
+venv/
+.venv/
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Build outputs
+**/dist/
+**/build/
+
+# Python cache & artifacts
+__pycache__/
+*.py[cod]
+
+# IDE and System files
+.vscode/
+.idea/
+.DS_Store

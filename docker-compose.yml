@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: pgvector/pgvector:pg16
+    container_name: snaptrace_postgres
+    environment:
+      POSTGRES_USER: snaptrace_admin
+      POSTGRES_PASSWORD: snaptrace_password
+      POSTGRES_DB: snaptrace_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+  redis:
+    image: redis:alpine
+    container_name: snaptrace_redis
+    ports:
+      - "6379:6379"
+volumes:
+  pgdata:  
