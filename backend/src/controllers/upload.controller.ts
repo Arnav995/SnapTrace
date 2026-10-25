@@ -68,7 +68,7 @@ const photoQueue = new Queue('photo-processing',{
 
 export async function confirmUploads(req:Request, res:Response){
 try {
-     const { events } = req.params;
+     const { eventId } = req.params;
      const { uploadedPhotos } = req.body;
 
      // this region later is gonna be used for postgresql metadata photos table

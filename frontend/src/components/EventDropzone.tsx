@@ -4,6 +4,7 @@ import axios from 'axios';
 
 interface EventDropzoneProps {
   eventId: string;
+  
 }
 
 export const EventDropzone: React.FC<EventDropzoneProps> = ({ eventId }) => {
